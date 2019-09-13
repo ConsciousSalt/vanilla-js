@@ -8,6 +8,8 @@
     <title>Drum Kit</title>
 </head>
 <body>
+    <div class="wrapper grayscale">
+    </div>
     <div class="keys">
         <div data-key="65" class="key">
             <kbd>A</kbd>
@@ -45,7 +47,8 @@
             <kbd>L</kbd>
             <span class="sound">tink</span>
         </div>
-    </div> 
+    </div>
+ 
     <audio data-key="65" src="./sounds/clap.wav"></audio> 
     <audio data-key="83" src="./sounds/hihat.wav"></audio>
     <audio data-key="68" src="./sounds/kick.wav"></audio>
@@ -57,7 +60,7 @@
     <audio data-key="76" src="./sounds/tink.wav"></audio>
 
 <script>
-    window.addEventListener('keydown', function(e){
+    function playsound(e){
         const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
         const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
         
@@ -66,9 +69,19 @@
         }
         audio.currentTime = 0;
         audio.play();
-
+        key.classList.add("active");
         console.log(audio);
-    });
+    }
+
+    function removeTransition(e){
+        console.log(e);
+        if (e.propertyName !=='transform') return;
+        this.classList.remove("active");
+    }
+
+    const keys = document.querySelectorAll('.key');
+    keys.forEach(key=>key.addEventListener('transitionend', removeTransition));
+    window.addEventListener('keydown', playsound);
 </script>
 
 </body>
