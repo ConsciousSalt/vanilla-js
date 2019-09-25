@@ -1,0 +1,27 @@
+.panel{
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    overflow: hidden;
+    min-height: 165vh;
+}
+
+.panel1{
+    background-image: url('https://cdn.pixabay.com/photo/2018/02/06/14/07/dance-3134828_960_720.jpg');
+}
+
+.panel2{
+    background-image: url('https://cdn.pixabay.com/photo/2017/03/16/16/31/easter-2149637_960_720.jpg');
+}
+
+.panel3{
+    background-image: url('https://images.unsplash.com/photo-1491555103944-7c647fd857e6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');
+}
+
+.panel4{
+    background-image: url('https://feelpositive.files.wordpress.com/2012/10/generosity.jpg');
+}
+
+.panel5{
+    background-image: url('https://res.cloudinary.com/twenty20/private_images/t_watermark-criss-cross-10/v1470092127000/photosp/fe6b08d7-49bb-424f-b11f-0d363eb75a5e/stock-photo-urban-scene-city-transportation-people-blur-public-transportation-motion-city-life-new-york-city-fe6b08d7-49bb-424f-b11f-0d363eb75a5e.jpg');
+}
