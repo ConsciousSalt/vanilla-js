@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sort Without Articles</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <ul id="bands"></ul>
+<script>
+    const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'Norma Jean', 'The Bled', 'Say Anything', 'The Midway State', 'We Came as Romans', 'Counterparts', 'Oh, Sleeper', 'A Skylit Drive', 'Anywhere But Here', 'An Old Dog'];
+    const articles = ['the', 'an', 'a'];
+
+    function firstWord(bandName){
+        return bandName.replace(/^(a |the |an )/i, '').trim();
+    }
+
+    const sortedBand = bands.sort((firstBand, secondBand)=>{
+        return firstWord(firstBand)>firstWord(secondBand)?1:-1;       
+    });
+    
+document.querySelector('#bands').innerHTML = sortedBand.map(band => `<li>${band}</li>`).join('');
+
+</script>
+
+</body>
+</html>
