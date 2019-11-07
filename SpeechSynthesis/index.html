@@ -65,7 +65,7 @@
   voicesDropdown.addEventListener('change', setVoice);
   options.forEach(option => option.addEventListener('change', setOption));
   speakButton.addEventListener('click', toggle);
-  speakButton.addEventListener('click', () => toggle(false));
+  stopButton.addEventListener('click', () => toggle(false));
 </script>
 
 </body>
